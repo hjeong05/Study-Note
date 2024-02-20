@@ -1,0 +1,40 @@
+# HashMap
+
+Map 과 HashMap 과의 차이 
+> Map은 인터페이스고 이를 구현하는 객체가 HashMap 
+
+Map<key, value> map = new HashMap<>();
+
+# value값 더하기
+map.put(key, map.get(key) + 1);
+
+# 해당 key의 value 저장/읽기
+map.put(key,1); // 저장 
+map.get(key); // 읽기
+
+# 해당 Key 존재여부 확인 
+if(map.containsKey("key1"))
+// 존재하면 true, 아니면 false 
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map; 
+
+public class HashMapMax {   
+  public static void main(String[] args) {
+  // HashMap 준비          
+  Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+  map.put(1, 10);        
+  map.put(2, 20);       
+  map.put(3, 30);         
+
+  // Max Value        
+  Integer maxValue = Collections.max(map.values());         
+  // Min Value        
+  Integer minValue = Collections.min(map.values());         
+
+  // 결과 출력        
+  System.out.println(maxValue); // 30        
+  System.out.println(minValue); // 10    }
+
+}
